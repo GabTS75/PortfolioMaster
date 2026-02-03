@@ -48,21 +48,25 @@
                 </p>
             </div>
             <div>
-                <nav> <!-- Barra de navegación con enlaces a secciones específicas de la página -->
-                    <ul>
-                        <li>
-                            <a href="#sobre-mi">Sobre mí</a>
-                        </li>
-                        <li>
-                            <a href="#mi-formacion">Formación</a>
-                        </li>
-                        <li>
-                            <a href="#mis-proyectos">Proyectos</a>
-                        </li>
-                        <li>
-                            <a href="#contactar">Contacto</a>
-                        </li>
+                <nav class="navbar"> <!-- Barra de navegación con enlaces a secciones específicas de la página -->
+
+                    <button class="menu-toggle" aria-label="Abrir menú"> <!-- Botón para menú móvil -->
+
+                        <span></span>
+                        <span></span>
+                        <span></span>
+
+                    </button>
+
+                    <ul class="nav-list">
+
+                        <li><a href="#sobre-mi">Sobre mí</a></li>
+                        <li><a href="#mi-formacion">Formación</a></li>
+                        <li><a href="#mis-proyectos">Proyectos</a></li>
+                        <li><a href="#contactar">Contacto</a></li>
+
                     </ul>
+
                 </nav>
             </div>
         </header>
@@ -90,13 +94,15 @@
                             capacidad de entender los problemas desde distintos ángulos, comunicarme con claridad y
                             trabajar con compromiso real</em>.</p>
 
-                    <p>Apasionado de la tecnología y la seguridad informática con una trayectoria muy singular. Me
+                    <p>Soy un apasionado de la tecnología y la seguridad informática con una trayectoria muy singular.
+                        Me
                         inicié en el sector IT en los 90 (soporte, redes y programación) y gestioné mi propio
                         emprendimiento tecnológico antes de emigrar a España.</p>
 
                     <p>Tras una etapa de maduración profesional en sectores de alta exigencia y atención al cliente
                         <em>—donde desarrollé una fuerte ética de trabajo y lealtad—</em>, he retornado a mi verdadera
-                        vocación actualizando mi perfil técnico al 100%.</p>
+                        vocación actualizando mi perfil técnico al 100%.
+                    </p>
 
                     <p>Actualmente, estoy enfocado en la <b>Ciberseguridad</b> y la <b>Administración de Sistemas</b>,
                         complementando mi formación reglada <em>con certificaciones en IA, Análisis de Datos y Respuesta
@@ -258,216 +264,82 @@
 
             </div>
 
-            <div class="proyectos"> <!-- Caja general de Proyectos -->
-
+            <div class="proyectos"> <!--- Caja general de Proyectos -->
                 <section> <!-- Sección de Proyectos -->
+                    <h2 id="mis-proyectos">Proyectos</h2>
+                    <p class="intro-proyectos">He trabajado en varios proyectos relacionados con la ciberseguridad,
+                        aplicando conocimientos teóricos en situaciones prácticas.</p>
+                    <!-- Introducción a los proyectos -->
 
-                    <h2 id="mis-proyectos">Proyectos</h2> <!-- Ancla sobre el encabezado de nivel 2 "Proyectos" -->
-                    <p> He trabajado en varios proyectos relacionados con la ciberseguridad, incluyendo la
-                        implementación de
-                        medidas de seguridad en redes, análisis de vulnerabilidades y desarrollo de políticas de
-                        seguridad.
-                        Estos proyectos me han permitido aplicar mis conocimientos teóricos en situaciones prácticas y
-                        mejorar
-                        mis habilidades técnicas. </p>
+                    <h3>Proyectos de Ciberseguridad</h3>
 
-                    <h3>Proyectos de Ciberseguridad</h3> <!-- Subtítulo para los proyectos -->
+                    <div class="grid-proyectos"> <!-- Contenedor de la cuadrícula de proyectos -->
 
-                    <div class="ids"> <!-- Caja del Proyecto 1 -->
-                        <article> <!-- Cada proyecto está contenido en un artículo separado. -->
-                            <table> <!-- Tabla para organizar la imagen y el texto del proyecto. -->
-                                <tr>
-                                    <td>
-                                        <figure> <!-- Figura para la imagen del proyecto. -->
-                                            <img width="300" src="./images/proyecto_01.png"
-                                                alt="Diagrama de red segura">
-                                            <!-- Imagen del proyecto. -->
-                                            <figcaption>Red segura con firewall y
-                                                honeypot.</figcaption> <!-- Pie de foto para la imagen. -->
-                                        </figure>
-                                    </td>
-                                    <td>
-                                        <h4>Firewall Avanzado y Sistema de Detección de Intrusiones (IDS) para PYME</h4>
-
-                                        <p> Este proyecto se centró en la <b>implementación de una arquitectura de
-                                                seguridad
-                                                de
-                                                red
-                                                robusta</b> para una pequeña y mediana empresa. Se configuró un
-                                            <b>firewall
-                                                de
-                                                última generación</b> (UTM) con reglas de filtrado de paquetes basadas
-                                            en el
-                                            principio de mínimo privilegio. Además, se desplegó un <b>Sistema de
-                                                Detección
-                                                de
-                                                Intrusiones (IDS)</b> basado en red (NIDS) y uno basado en host (HIDS)
-                                            para
-                                            <b>monitorizar el tráfico</b> y alertar sobre patrones de ataque conocidos y
-                                            anomalías.
-                                        </p>
-
-                                        <p> Esto incluyó la <b>segmentación de la red</b> (LAN de empleados, DMZ, y red
-                                            de
-                                            invitados) mediante VLANs para contener posibles brechas de seguridad y
-                                            <b>minimizar
-                                                la
-                                                superficie de ataque</b>.
-                                        </p>
-
-                                        <p><strong>Detalles:</strong> <a href="#" target="_blank">Ver Informe Técnico
-                                                Completo</a>
-                                        </p>
-
-                                        <p><strong>Video:</strong> <a href="#" target="_blank">Demostración de
-                                                Configuración
-                                                y
-                                                Alerta</a></p>
-                                    </td>
-                                </tr>
-                            </table>
+                        <article class="card glass"> <!-- Tarjeta de proyecto con efecto glassmorphism -->
+                            <figure>
+                                <img src="./images/proyecto_01.png" alt="Diagrama de red segura">
+                                <figcaption>Red segura con firewall y honeypot</figcaption>
+                            </figure>
+                            <div class="card-content"> <!-- Contenido de la tarjeta -->
+                                <h4>Firewall Avanzado y IDS para PYME</h4>
+                                <p>Implementación de una arquitectura de seguridad robusta (UTM, NIDS/HIDS) y
+                                    segmentación mediante VLANs para minimizar la superficie de ataque.</p>
+                                <div class="card-links"> <!-- Enlaces relacionados con el proyecto -->
+                                    <a href="#" target="_blank">Ver Informe</a>
+                                    <a href="#" target="_blank">Ver Video</a>
+                                </div>
+                            </div>
                         </article>
-                    </div>
 
-                    <hr>
-
-                    <div class="segu"> <!-- Caja del Proyecto 2 -->
-                        <article>
-                            <table>
-                                <tr>
-                                    <td>
-                                        <h4>Auditoría de Seguridad y Análisis de Vulnerabilidades Web para Plataforma
-                                            E-commerce
-                                        </h4>
-
-                                        <p> Se realizó un <b>análisis de vulnerabilidades y una prueba de penetración
-                                                (pentesting)</b>
-                                            de caja negra y caja gris sobre una plataforma de comercio electrónico. El
-                                            objetivo
-                                            fue
-                                            identificar y mitigar fallos de seguridad críticos siguiendo las directrices
-                                            de
-                                            <b>OWASP
-                                                Top 10</b>.
-                                        </p>
-
-                                        <p> Las tareas incluyeron la <b>explotación controlada</b> de vulnerabilidades
-                                            como
-                                            <b>Inyección SQL</b>,
-                                            <b>Cross-Site Scripting (XSS)</b> y configuraciones erróneas del servidor.
-                                            El
-                                            resultado
-                                            fue
-                                            un <b>informe detallado con el nivel de riesgo</b> de cada vulnerabilidad y
-                                            <b>recomendaciones específicas</b> de remediación, logrando una reducción
-                                            del
-                                            <b>90%</b>
-                                            en los riesgos de
-                                            exposición críticos.
-                                        </p>
-
-                                        <p><strong>Detalles:</strong> <a href="#" target="_blank">Acceder al Resumen
-                                                Ejecutivo
-                                                de la
-                                                Auditoría</a></p>
-
-                                        <p><strong>Video:</strong> <a href="#" target="_blank">Video de Prueba de
-                                                Concepto
-                                                (PoC)
-                                                de
-                                                XSS Mitigado</a></p>
-                                    </td>
-                                    <td>
-                                        <figure>
-                                            <img width="300" src="./images/proyecto_02.png" alt="Informe de pentesting">
-                                            <figcaption>Informe de pentesting con gráficos de riesgo</figcaption>
-                                        </figure>
-                                    </td>
-                                </tr>
-                            </table>
+                        <article class="card glass">
+                            <figure>
+                                <img src="./images/proyecto_02.png" alt="Informe de pentesting">
+                                <figcaption>Informe de pentesting</figcaption>
+                            </figure>
+                            <div class="card-content">
+                                <h4>Auditoría y Pentesting E-commerce</h4>
+                                <p>Análisis de vulnerabilidades (OWASP Top 10), inyección SQL y XSS. Reducción del 90%
+                                    en riesgos de exposición críticos.</p>
+                                <div class="card-links">
+                                    <a href="#" target="_blank">Ver Resumen</a>
+                                    <a href="#" target="_blank">Ver PoC</a>
+                                </div>
+                            </div>
                         </article>
-                    </div>
 
-                    <hr>
-
-                    <div class="desa"> <!-- Caja del Proyecto 3 -->
-                        <article>
-                            <table>
-                                <tr>
-                                    <td>
-                                        <figure>
-                                            <img width="300" src="./images/proyecto_03.png"
-                                                alt="Manual de políticas de seguridad">
-                                            <figcaption>Manual de políticas con un candado</figcaption>
-                                        </figure>
-                                    </td>
-                                    <td>
-                                        <h4>Desarrollo e Implementación del Marco de Políticas de Seguridad de la
-                                            Información
-                                            (PSI)
-                                        </h4>
-
-                                        <p> Este proyecto consistió en la <b>creación y despliegue de un conjunto
-                                                integral
-                                                de
-                                                Políticas de
-                                                Seguridad de la Información (PSI)</b>, alineadas con los estándares
-                                            <b>ISO
-                                                27001</b>
-                                            y las
-                                            regulaciones
-                                            de protección de datos (ej., GDPR/LOPDGDD). Se diseñaron políticas clave,
-                                            incluyendo
-                                            la
-                                            <b>Política
-                                                de Gestión de Contraseñas</b>, la <b>Política de Control de Acceso</b> y
-                                            el
-                                            <b>Plan
-                                                de
-                                                Respuesta a
-                                                Incidentes (PRI)</b>.
-                                        </p>
-                                        <p> La implementación incluyó <b>sesiones de capacitación obligatorias</b> para
-                                            todo
-                                            el
-                                            personal
-                                            y la
-                                            integración de las políticas con las herramientas de gestión de identidad y
-                                            acceso
-                                            (IAM)
-                                            de la
-                                            organización. </p>
-
-                                        <p><strong>Detalles:</strong> <a href="#" target="_blank">Consultar Índice del
-                                                Manual de
-                                                Políticas</a></p>
-
-                                        <p><strong>Video:</strong> <a href="#" target="_blank">Clip de la Sesión de
-                                                Concienciación
-                                                sobre Phishing</a></p>
-                                    </td>
-                                </tr>
-                            </table>
+                        <article class="card glass">
+                            <figure>
+                                <img src="./images/proyecto_03.png" alt="Manual de políticas">
+                                <figcaption>Políticas de Seguridad (PSI)</figcaption>
+                            </figure>
+                            <div class="card-content">
+                                <h4>Marco Normativo ISO 27001</h4>
+                                <p>Creación y despliegue de políticas PSI, gestión de contraseñas, control de acceso y
+                                    Plan de Respuesta a Incidentes (PRI).</p>
+                                <div class="card-links">
+                                    <a href="#" target="_blank">Ver Manual</a>
+                                    <a href="#" target="_blank">Ver Sesión</a>
+                                </div>
+                            </div>
                         </article>
-                    </div>
 
+                    </div>
                 </section>
-
             </div>
 
             <hr>
 
             <div class="contacto"> <!-- Caja del Contacto-->
 
-                <section>
+                <section> <!-- Sección de Contacto -->
 
                     <h2 id="contactar">Contacto</h2><!-- Ancla sobre el encabezado de nivel 2 "Contacto" -->
                     <p> Puedes contactarme rellenando el siguiente formulario: </p>
                     <div>
                         <form> <!-- Inicio del formulario de contacto. -->
                             <label for="nombre">Nombre:</label> <!-- Etiqueta para el nombre. -->
-                            <input type="text" id="nombre" name="nombre" placeholder="escribe tu nombre" required
-                                autofocus><br><br>
+                            <input type="text" id="nombre" name="nombre" placeholder="escribe tu nombre"
+                                required><br><br>
                             <!-- Campo de texto para el nombre que es obligatorio. -->
                             <label for="email">Correo Electrónico:</label> <!-- Etiqueta para el correo electrónico. -->
                             <input type="email" id="email" name="email" placeholder="tucorreo@email.com"><br><br>
@@ -524,6 +396,24 @@
         </footer>
 
     </div>
+
+    <script> // Script para el menú de navegación responsive
+        const menuToggle = document.querySelector('.menu-toggle'); // Selecciona el botón del menú
+        const navList = document.querySelector('.nav-list'); // Selecciona la lista de navegación
+
+        menuToggle.addEventListener('click', () => { // Evento de clic en el botón del menú
+            navList.classList.toggle('active');
+            menuToggle.classList.toggle('open');
+        });
+
+        // Cerrar menú al hacer clic en un enlace
+        document.querySelectorAll('.nav-list a').forEach(link => { // Selecciona todos los enlaces de la lista de navegación
+            link.addEventListener('click', () => { // Evento de clic en cada enlace
+                navList.classList.remove('active');
+                menuToggle.classList.remove('open');
+            });
+        });
+    </script>
 
 </body>
 
