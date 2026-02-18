@@ -38,7 +38,7 @@
     box-sizing: border-box;
     /* Para que el padding no afecte al tamaño total */
     cursor: default !important;
-    /* Cursor por defecto (quito la manito del maouse en los links)*/
+    /* Cursor por defecto (quito la manito del maouse para los links)*/
 }
 
 html {
@@ -95,7 +95,7 @@ body::after {
     right: -100px;
 }
 
-/* 2. CLASES DE UTILIDAD (LA MAGIA DEL CRISTAL) */
+/* 2. CLASES (Estilo Cristal) */
 .glass,
 .sobreMi,
 .formacion,
@@ -129,11 +129,11 @@ main {
     /* Separación entre grandes bloques */
 }
 
-/* 3. HEADER Y NAV (MENÚ MÓVIL) */
+/* 3. HEADER Y NAV */
 header {
     text-align: center;
-    padding: 40px 20px;
-    /* Espacio de 40px arriba y abajo, y 20px a los lados */
+    padding: 40px 20px 10px 20px;
+    /* Espacio de 40px arriba, 20px derecha, 10px abajo y 20px izquierda */
     margin-bottom: 20px;
     /* Espacio debajo del header para separar del contenido */
 }
@@ -192,7 +192,7 @@ h1 {
     /* Usamos flexbox para centrar el menú */
     justify-content: center;
     /* Centramos horizontalmente */
-    padding: 20px 0;
+    padding: 10px 0;
 }
 
 .nav-list {
@@ -361,7 +361,7 @@ dd {
     padding-left: 10px;
 }
 
-/* 5. FORMACIÓN Y ESPECIALIZACIÓN */
+/* 5. SECCIÓN "Formación y Especialización" */
 .formacion {
     padding: 40px;
 }
@@ -422,7 +422,7 @@ ul li::before {
     left: 0;
 }
 
-/* 6. PROYECTOS */
+/* 6. SECCIÓN "Proyectos" */
 .proyectos {
     padding: 40px;
 }
@@ -518,7 +518,7 @@ ul li::before {
     color: var(--bg-dark);
 }
 
-/* 7. CONTACTO */
+/* 7. SECCIÓN "Contacto" */
 .contacto {
     padding: 40px;
 }
@@ -569,12 +569,12 @@ input[type="reset"] {
     font-size: 0.9rem;
 }
 
-/* 8. FOOTER */
+/* 8. SECCIÓN "Footer" */
 footer {
     text-align: center;
-    padding: 40px;
+    padding: 60px 10px 40px 10px; /* Amplio espacio para el footer */
     border-top: 1px solid var(--glass-border);
-    margin-top: 60px;
+    margin-top: 60px; /* Separación entre el contenido y el footer */
     background: var(--bg-medium);
 }
 
@@ -583,10 +583,12 @@ footer {
     justify-content: center;
     gap: 20px;
     list-style: none;
+    margin-top: 40px;
     margin-bottom: 20px;
 }
 
 .links a {
+
     color: var(--text-main);
     text-decoration: none;
     font-size: 1.2rem;
@@ -644,30 +646,41 @@ footer {
 
     .nav-list {
         position: fixed;
-        top: 0; /* Fijo para que se mantenga en su lugar al hacer scroll */
+        top: 0;
+        /* Fijo para que se mantenga en su lugar al hacer scroll */
         right: -100%;
         /* Oculto a la derecha */
-        width: 70%; /* Ocupa el 70% del ancho de la pantalla */
-        height: 100vh; /* Altura completa de la pantalla */
+        width: 70%;
+        /* Ocupa el 70% del ancho de la pantalla */
+        height: 100vh;
+        /* Altura completa de la pantalla */
         background: rgba(15, 23, 42, 0.95);
-        flex-direction: column; /* Las opciones del menú se apilan verticalmente */
+        flex-direction: column;
+        /* Las opciones del menú se apilan verticalmente */
         justify-content: center;
         align-items: center;
         border-radius: 0;
-        transition: right 0.4s ease; /* Transición suave para el menú */
-        z-index: 150; /* Por debajo del botón pero por encima del contenido */
+        transition: right 0.4s ease;
+        /* Transición suave para el menú */
+        z-index: 150;
+        /* Por debajo del botón pero por encima del contenido */
     }
 
     .nav-list.active {
-        right: 0; /* El menú se desliza desde la derecha */
+        right: 0;
+        /* El menú se desliza desde la derecha */
     }
 
     /* Ajustes Sobre Mí en móvil */
     .sobreMi figure {
-        float: none; /* Quitamos el float para que la imagen se comporte como un bloque */
-        margin: 0 auto 10px auto; /* Centrado horizontal y margen inferior para separar del texto */
-        display: block; /* Para que la imagen se comporte como un bloque y se centre */
-        width: 150px; /* Ancho reducido para móviles */
+        float: none;
+        /* Quitamos el float para que la imagen se comporte como un bloque */
+        margin: 0 auto 10px auto;
+        /* Centrado horizontal y margen inferior para separar del texto */
+        display: block;
+        /* Para que la imagen se comporte como un bloque y se centre */
+        width: 150px;
+        /* Ancho reducido para móviles */
     }
 
     h1 {
