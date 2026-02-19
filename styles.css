@@ -133,7 +133,7 @@ main {
 /* 3. HEADER Y NAV */
 header {
     text-align: center;
-    padding: 40px 20px 10px 20px;
+    padding: 60px 20px 10px 20px;
     /* Espacio de 40px arriba, 20px derecha, 10px abajo y 20px izquierda */
     margin-bottom: 20px;
     /* Espacio debajo del header para separar del contenido */
