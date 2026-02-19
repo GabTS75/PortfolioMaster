@@ -39,6 +39,7 @@
     /* Para que el padding no afecte al tamaño total */
     cursor: default !important;
     /* Cursor por defecto (quito la manito del maouse para los links)*/
+    /* Si se requiere restaurar (que cambie a "manito" en los enlaces, se elimina esa línea */
 }
 
 html {
@@ -106,7 +107,7 @@ body::after {
     backdrop-filter: blur(12px);
     /* Efecto de vidrio esmerilado */
     -webkit-backdrop-filter: blur(12px);
-    /* Soporte para Safari */
+    /* Soporte Safari y Edge */
     border: 1px solid var(--glass-border);
     /* Borde sutil para definir el cristal */
     border-radius: 16px;
@@ -174,7 +175,7 @@ h1 {
     background-clip: text;
     /* Clipa el fondo al texto */
     -webkit-background-clip: text;
-    /* Soporte para Safari */
+    /* Soporte Safari y Edge */
     -webkit-text-fill-color: transparent;
     /* Se ve el texto con el degradado */
     margin-bottom: 10px;
